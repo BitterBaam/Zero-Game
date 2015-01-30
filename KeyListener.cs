@@ -16,10 +16,9 @@ namespace Zero_Game
             do
             {
                 keyinfo = Console.ReadKey();
-                Menu.bacon();
+                Menu.listen();
 
             }
-                
             while (keyinfo.Key != ConsoleKey.Escape && tjekking);
         }
     }

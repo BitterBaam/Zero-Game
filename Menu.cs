@@ -38,12 +38,55 @@ namespace Zero_Game
 
         private static Boolean SelectPlay = true;
 
-        public static void bacon()
+        public static void listen()
         {
-           if(KeyListener.keyinfo.Key == ConsoleKey.B)
-           {
-               Console.WriteLine("Bacon");
-           }
+            if (KeyListener.keyinfo.Key == ConsoleKey.DownArrow)
+            {
+                if (SelectPlay)
+                {
+                    Menu.map[601] = Program.SelectChar;
+                    Menu.map[841] = " ";
+                    Screen.print();
+                    SelectPlay = false;
+                }
+                else if (!SelectPlay)
+                {
+                    Menu.map[841] = Program.SelectChar;
+                    Menu.map[601] = " ";
+                    Screen.print();
+                    SelectPlay = true;
+                }
+
+            }
+            if (KeyListener.keyinfo.Key == ConsoleKey.UpArrow)
+            {
+                if (!SelectPlay)
+                {
+                    Menu.map[841] = Program.SelectChar;
+                    Menu.map[601] = " ";
+                    Screen.print();
+                    SelectPlay = true;
+                }
+                else if (SelectPlay)
+                {
+                    Menu.map[601] = Program.SelectChar;
+                    Menu.map[841] = " ";
+                    Screen.print();
+                    SelectPlay = false;
+                }
+            }
+            if (KeyListener.keyinfo.Key == ConsoleKey.Enter)
+            {
+                if (Menu.map[601] == "#")
+                {
+                    Program.CurrentMap = WorldGen.map;
+                    Screen.print();
+                }
+                else if (Menu.map[841] == "#")
+                {
+                    KeyListener.tjekking = false;
+                }
+            }
         }
 /*
         public static void KeyListener()
