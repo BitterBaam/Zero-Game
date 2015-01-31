@@ -16,7 +16,14 @@ namespace Zero_Game
             do
             {
                 keyinfo = Console.ReadKey();
-                Menu.listen();
+                if (Program.CurrentMap == Menu.map)
+                {
+                    Menu.listen();
+                }
+                if(Program.CurrentMap == WorldGen.map)
+                {
+                    WorldGen.listen();
+                }
 
             }
             while (keyinfo.Key != ConsoleKey.Escape && tjekking);

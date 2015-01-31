@@ -34,5 +34,49 @@ namespace Zero_Game
         "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#",
         "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"
         };
+
+        public static void listen()
+        {
+            if(KeyListener.keyinfo.Key == ConsoleKey.DownArrow)
+            {
+                map[Player.Position] = tilePath.Char;
+                if(Player.Position <= 1840)
+                {
+                    Player.Position += 80;
+                }
+                WorldGen.map[Player.Position] = Player.Char;
+                Screen.print();
+            }
+            if (KeyListener.keyinfo.Key == ConsoleKey.UpArrow)
+            {
+                map[Player.Position] = tilePath.Char;
+                if (Player.Position >= 80)
+                {
+                    Player.Position -= 80;
+                }
+                WorldGen.map[Player.Position] = Player.Char;
+                Screen.print();
+            }
+            if(KeyListener.keyinfo.Key == ConsoleKey.LeftArrow)
+            {
+                map[Player.Position] = tilePath.Char;
+                if (Player.Position >= 1)
+                {
+                    Player.Position--;
+                }
+                WorldGen.map[Player.Position] = Player.Char;
+                Screen.print();
+            }
+            if (KeyListener.keyinfo.Key == ConsoleKey.RightArrow)
+            {
+                map[Player.Position] = tilePath.Char;
+                if (Player.Position <= 1919)
+                {
+                    Player.Position++;
+                }
+                WorldGen.map[Player.Position] = Player.Char;
+                Screen.print();
+            }
+        }
     }
 }
