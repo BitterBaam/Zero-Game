@@ -70,7 +70,7 @@ namespace Zero_Game
             if (KeyListener.keyinfo.Key == ConsoleKey.RightArrow)
             {
                 map[Player.Position] = tilePath.Char;
-                if (Player.Position <= 1919)
+                if (Player.Position <= 1918)
                 {
                     Player.Position++;
                 }
