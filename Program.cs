@@ -31,19 +31,23 @@ namespace Zero_Game
             Player.Position = 5;
             Player.Char = "P";
             tilePath.Char = "#";
+            tileEnemy.Char = "E";
             SelectChar = "#";
             WorldGen.map[Player.Position] = Player.Char;
             KeyListener.tjekking = true;
+
 
             int count = 0;
             foreach(string i in WorldGen.map)
             {
                 if(count != Player.Position)
                 {
-                    WorldGen.map[count] = "#";
+                    WorldGen.map[count] = " ";
                 }
                 count++;
             }
+            WorldGen.populateEnemeis(100
+                );
         }
     }
 }

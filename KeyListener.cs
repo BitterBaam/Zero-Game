@@ -19,14 +19,22 @@ namespace Zero_Game
                 if (Program.CurrentMap == Menu.map)
                 {
                     Menu.listen();
+                    if(keyinfo.Key == ConsoleKey.Escape)
+                    {
+                        tjekking = false;
+                    }
                 }
                 if(Program.CurrentMap == WorldGen.map)
                 {
                     WorldGen.listen();
                 }
-
+                if(Program.CurrentMap == WorldGen.map && keyinfo.Key == ConsoleKey.Escape)
+                {
+                    Program.CurrentMap = Menu.map;
+                    Screen.print();
+                }
             }
-            while (keyinfo.Key != ConsoleKey.Escape && tjekking);
+            while (tjekking);
         }
     }
 }

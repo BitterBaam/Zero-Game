@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Zero_Game
 {
-    class tilePath
+    class tileEnemy
     {
-         public static string Char { get; set; }
+        public static string Char { get; set; }
     }
 }
