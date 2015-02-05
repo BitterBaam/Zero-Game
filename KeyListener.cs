@@ -20,18 +20,13 @@ namespace Zero_Game
                 {
                     Menu.listen();
                 }
-                else if(Program.CurrentMap == Menu.map2)
+                else if(Program.CurrentMap == Menu2.map)
                 {
-                    Menu.listen2();
+                    Menu2.listen();
                 }
                 else if (Program.CurrentMap == WorldGen.map)
                 {
                     WorldGen.listen();
-                }
-                if(Program.CurrentMap == WorldGen.map && keyinfo.Key == ConsoleKey.Escape)
-                {
-                    Program.CurrentMap = Menu.map;
-                    Screen.print();
                 }
             }
         }
