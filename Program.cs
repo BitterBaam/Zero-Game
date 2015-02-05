@@ -12,12 +12,11 @@ namespace Zero_Game
     {
         public static string[] CurrentMap;
         public static string SelectChar;
+        public static string SelectChar2;
 
-        private static Boolean Going = false;
         static void Main(string[] args)
         {
             
-            Going = true;
             InitGame();
             CurrentMap = Menu.map;
             Screen.print();
@@ -28,26 +27,18 @@ namespace Zero_Game
         }
         private static void InitGame()
         {
-            Player.Position = 5;
+            Player.Position = 840;
             Player.Char = "P";
             tilePath.Char = "#";
             tileEnemy.Char = "E";
-            SelectChar = "#";
+            SelectChar = "]";
+            SelectChar2 = "[";
+            Menu.map[600] = SelectChar;
+            Menu.map2[600] = SelectChar;
+            Menu.map[595] = SelectChar2;
+            Menu.map2[590] = SelectChar2;
             WorldGen.map[Player.Position] = Player.Char;
             KeyListener.tjekking = true;
-
-
-            int count = 0;
-            foreach(string i in WorldGen.map)
-            {
-                if(count != Player.Position)
-                {
-                    WorldGen.map[count] = " ";
-                }
-                count++;
-            }
-            WorldGen.populateEnemeis(100
-                );
         }
     }
 }

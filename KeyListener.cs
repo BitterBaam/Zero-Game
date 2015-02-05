@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Threading;
 namespace Zero_Game
 {
     class KeyListener
@@ -13,18 +13,18 @@ namespace Zero_Game
 
         public static void Listen()
         {
-            do
+            while (tjekking)
             {
                 keyinfo = Console.ReadKey();
                 if (Program.CurrentMap == Menu.map)
                 {
                     Menu.listen();
-                    if(keyinfo.Key == ConsoleKey.Escape)
-                    {
-                        tjekking = false;
-                    }
                 }
-                if(Program.CurrentMap == WorldGen.map)
+                else if(Program.CurrentMap == Menu.map2)
+                {
+                    Menu.listen2();
+                }
+                else if (Program.CurrentMap == WorldGen.map)
                 {
                     WorldGen.listen();
                 }
@@ -34,7 +34,6 @@ namespace Zero_Game
                     Screen.print();
                 }
             }
-            while (tjekking);
         }
     }
 }
