@@ -11,9 +11,9 @@ namespace Zero_Game
 {
     class Program
     {
-        public static string[] CurrentMap;
-        public static string SelectChar;
-        public static string SelectChar2;
+        public static Char[] CurrentMap;
+        public static Char SelectChar;
+        public static Char SelectChar2;
 
         static void Main(string[] args)
         {
@@ -29,11 +29,11 @@ namespace Zero_Game
         private static void InitGame()
         {
             Player.Position = 840;
-            Player.Char = "P";
-            tilePath.Char = "#";
-            tileEnemy.Char = "E";
-            SelectChar = "]";
-            SelectChar2 = "[";
+            Player.Char = 'P';
+            tilePath.Char = '#';
+            tileEnemy.Char = 'E';
+            SelectChar = ']';
+            SelectChar2 = '[';
             Menu.map[600] = SelectChar;
             Menu2.map[600] = SelectChar;
             Menu.map[595] = SelectChar2;
@@ -43,15 +43,18 @@ namespace Zero_Game
         }
         public static void SaveGame()
         {
-            string FileName = "WorldGenMap";
+            string FileName = "WorldGen";
             try
             {
-                StreamWriter save = new StreamWriter(FileName + ".txt", false);
-                foreach (string i in WorldGen.map)
+                StreamWriter saveMap = new StreamWriter(FileName + "map.txt", false);
+                StreamWriter savePos = new StreamWriter(FileName + "PlayerPos.txt", false);
+                foreach (Char i in WorldGen.map)
                 {
-                    save.Write(i);
+                    saveMap.Write(i);
                 }
-                save.Close();
+                savePos.Write(Player.Position);
+                saveMap.Close();
+                savePos.Close();
             }
             catch (Exception e)
             {
@@ -60,12 +63,23 @@ namespace Zero_Game
         }
         public static void LoadGame()
         {
-            string FileName = "WorldGenMap.txt";
+            string FileName = "WorldGen";
             try
             {
-                StreamReader read = new StreamReader(FileName);
-                Console.WriteLine((char)read.Peek());
-                read.Close();
+                int i = 0;
+                StreamReader readMap = new StreamReader(FileName + "Map.txt");
+                StreamReader readPlayerPos = new StreamReader(FileName + "PlayerPos.txt");
+                while (readMap.Peek() >= 0)
+                {
+                    WorldGen.map[i] = ((char)readMap.Read());
+                    i++;
+                }
+                Player.Position = readPlayerPos.Read();
+                Program.CurrentMap = WorldGen.map;
+                Screen.print();
+                readMap.Close();
+                readPlayerPos.Close();
+                
             }
             catch(Exception e)
             {

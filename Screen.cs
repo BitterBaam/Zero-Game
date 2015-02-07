@@ -12,7 +12,7 @@ namespace Zero_Game
         public static void print()
         {
             Console.Clear();
-            foreach (string i in Program.CurrentMap)
+            foreach (char i in Program.CurrentMap)
             {
                 Console.Write(i);
             }

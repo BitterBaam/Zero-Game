@@ -8,6 +8,6 @@ namespace Zero_Game
 {
     class tileEnemy
     {
-        public static string Char { get; set; }
+        public static Char Char { get; set; }
     }
 }
