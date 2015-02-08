@@ -3,4 +3,7 @@ c:\users\kasp041a\documents\visual studio 2013\Projects\Zero Game\bin\Debug\Zero
 c:\users\kasp041a\documents\visual studio 2013\Projects\Zero Game\bin\Debug\Zero Game.pdb
 c:\users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.exe
 c:\users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.pdb
-C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.csprojResolveAssemblyReference.cache
+C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\bin\Debug\Zero Game.exe.manifest
+C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\bin\Debug\Zero Game.application
+C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.exe.manifest
+C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.application

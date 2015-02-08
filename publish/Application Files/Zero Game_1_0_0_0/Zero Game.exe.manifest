@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Zero Game.exe" version="1.0.0.0" publicKeyToken="966f8e1234d0badb" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Zero Game" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Zero Game.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Zero Game.exe" size="21928">
+      <assemblyIdentity name="Zero Game" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>alrqcmllxAfmt54x9jaT7dwL49Uvb/AIBjKStKAsEJ4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Zero Game.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=SDE\kasp041a" issuerKeyHash="d656cff920afe84b277623490adc89a58a212ba2" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>gct6kGSAaxQCIa8BrIYqRS8UP474IzIfMQuSyVv/vho=</DigestValue></Reference></SignedInfo><SignatureValue>NoG1ocyt8gXasMYNJdq0Ro1khyV1lBhCzXRdl2LX7ueT4e4CrM9AGHjDyOLJT5vMxgdV2dQXGa1ck9kyRT6990N0cFI46MEZCSiDdwh6F44NmVFccPSze+u0LMi5uBjBZ4fkLkYSSE5F0umZMbbd75aiZTh7Uk3qBAgcpvGsUtY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>nc93nx59dQPXPcVVXVy6ugt56I+XEvwr9XQa3p29ch9p3dkI6foOjWrkMACU2aTz0mHh25huiUJCzRwVIISTP5Y6gLNzhIvhQkkaVB/l3qzqbKDU3ti54sZ/jKQVHDg+VyuxnEuRGqEZUlvh69AvMGA9JzqCJC2RfuCLoLyHzUE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1abeff5bc9920b311f3223f88e3f142f452a86ac01af2102146b8064907acb81" Description="" Url=""><as:assemblyIdentity name="Zero Game.exe" version="1.0.0.0" publicKeyToken="966f8e1234d0badb" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SDE\kasp041a</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>5uGtN/B28Wial8GINwH1Iap5IXDg3qMsw9ko3NlVRBI=</DigestValue></Reference></SignedInfo><SignatureValue>cUHeCHR13XjjXEZMOSlU5SptdCQUuWkqSiKLIc8Fvvdh5Zu2WLj9NIIKt5IMzjLoQowiXVxvl6afKv16P8l8OLUOfzgwPRvh3oCUgJojwmgSoFZOHNmJVLNK1Lxu9s5tVi8lQpl1q/69EDOa8ATs47SeNTHpAlOKDnLIlBoEv08=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>nc93nx59dQPXPcVVXVy6ugt56I+XEvwr9XQa3p29ch9p3dkI6foOjWrkMACU2aTz0mHh25huiUJCzRwVIISTP5Y6gLNzhIvhQkkaVB/l3qzqbKDU3ti54sZ/jKQVHDg+VyuxnEuRGqEZUlvh69AvMGA9JzqCJC2RfuCLoLyHzUE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQJJ6x7eTQjYlGW6siFZansjANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAUwBEAEUAXABrAGEAcwBwADAANAAxAGEwHhcNMTUwMjA4MjExNTU5WhcNMTYwMjA5MDMxNTU5WjAjMSEwHwYDVQQDHhgAUwBEAEUAXABrAGEAcwBwADAANAAxAGEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ3Pd58efXUD1z3FVV1curoLeeiPlxL8K/V0Gt6dvXIfad3ZCOn6Do1q5DAAlNmk89Jh4duYbolCQs0cFSCEkz+WOoCzc4SL4UJJGlQf5d6s6myg1N7YueLGf4ykFRw4PlcrsZxLkRqhGVJb4evQLzBgPSc6giQtkX7gi6C8h81BAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAOroh0rJJmDPQG4ntPYrnirn0VQBmwSkMuevpuZ47ZBtwy7fHmyiYPEQ0xcuXLY3fXnZVbvvh7zB3M7pXgD2fKK55Mwdi3QX/XWj6UHcLKzvtfjT8vZzPafjdJVQvqvH4FFs09WFE/RloAsfm4hTfkAaXb2toytQA6pKPlW2Alcg=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

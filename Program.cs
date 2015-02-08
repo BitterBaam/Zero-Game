@@ -74,7 +74,7 @@ namespace Zero_Game
                     WorldGen.map[i] = ((char)readMap.Read());
                     i++;
                 }
-                Player.Position = readPlayerPos.Read();
+                Player.Position = Convert.ToInt32(readPlayerPos.ReadToEnd());
                 Program.CurrentMap = WorldGen.map;
                 Screen.print();
                 readMap.Close();
