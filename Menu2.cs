@@ -85,7 +85,7 @@ namespace Zero_Game
                 }
                 else if (map[Reverse] == Program.SelectChar)
                 {
-                    Program.CurrentMap = map;
+                    Program.CurrentMap = Menu.map;
                     Screen.print();
                 }
             }

@@ -7,3 +7,4 @@ C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\bin\Debug\Zero
 C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\bin\Debug\Zero Game.application
 C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.exe.manifest
 C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.application
+C:\Users\kasp041a\documents\visual studio 2013\Projects\Zero Game\obj\Debug\Zero Game.csprojResolveAssemblyReference.cache

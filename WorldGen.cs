@@ -36,7 +36,7 @@ namespace Zero_Game
         ' ', 'K', 'E', 'Y', ' ', 'B', 'I', 'N', 'D', 'I', 'N', 'G', 'S', ' ', 'I', 'S', ' ', '^', ' ', 'v', ' ', '<', ' ', '>', ' ', 'E', 'N', 'T', 'E', 'R', ' ', 'A', 'N', 'D', ' ', 'E', 'S', 'C', 'A', 'P', 'E', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '
         };
 
-        private static Random randomP = new Random();
+        private static Random random = new Random();
         public static void newMap()
         {
             int count = 0;
@@ -45,21 +45,17 @@ namespace Zero_Game
                 map[count] = ' ';
                 count++;
             }
-            Player.Position = randomE.Next(1919);
+            Player.Position = random.Next(1919);
             map[Player.Position] = Player.Char;
             populateEnemeis(10);
             Screen.print();
         }
-
-
-        private static Random randomE = new Random();
         private static void populateEnemeis(int number)
         {
             int i = 0;
             while(i < number)
             {
-                map[randomE.Next(1919)] = tileEnemy.Char;
-
+                map[random.Next(1919)] = tileEnemy.Char;
                 i++;
             }
         }
@@ -77,41 +73,41 @@ namespace Zero_Game
         {
             if(KeyListener.keyinfo.Key == ConsoleKey.DownArrow)
             {
-                map[Player.Position] = tilePath.Char;
                 if(Player.Position <= 1839)
                 {
                     Player.Position += 80;
                 }
+                lightUp();
                 WorldGen.map[Player.Position] = Player.Char;
                 Screen.print();
             }
             if (KeyListener.keyinfo.Key == ConsoleKey.UpArrow)
             {
-                map[Player.Position] = tilePath.Char;
                 if (Player.Position >= 80)
                 {
                     Player.Position -= 80;
                 }
+                lightUp();
                 WorldGen.map[Player.Position] = Player.Char;
                 Screen.print();
             }
             if(KeyListener.keyinfo.Key == ConsoleKey.LeftArrow)
             {
-                map[Player.Position] = tilePath.Char;
                 if (Player.Position >= 1)
                 {
                     Player.Position--;
                 }
+                lightUp();
                 WorldGen.map[Player.Position] = Player.Char;
                 Screen.print();
             }
             if (KeyListener.keyinfo.Key == ConsoleKey.RightArrow)
             {
-                map[Player.Position] = tilePath.Char;
                 if (Player.Position <= 1918)
                 {
                     Player.Position++;
                 }
+                lightUp();
                 WorldGen.map[Player.Position] = Player.Char;
                 Screen.print();
             }
@@ -121,6 +117,21 @@ namespace Zero_Game
                 Screen.print();
                 Program.SaveGame();
             }
+        }
+        private static void lightUp()
+        {
+            tilePath.Place(Player.Position - 1);
+            tilePath.Place(Player.Position - 2);
+            tilePath.Place(Player.Position - 79);
+            tilePath.Place(Player.Position - 80);
+            tilePath.Place(Player.Position - 81);
+            tilePath.Place(Player.Position - 160);
+            tilePath.Place(Player.Position + 1);
+            tilePath.Place(Player.Position + 2);
+            tilePath.Place(Player.Position + 79);
+            tilePath.Place(Player.Position + 80);
+            tilePath.Place(Player.Position + 81);
+            tilePath.Place(Player.Position + 160);
         }
     }
 }
