@@ -37,6 +37,9 @@ namespace Zero_Game
         };
 
         private static Random random = new Random();
+        public static int numberOfEnemies;
+        private static List<int> numberOfLightPos = new List<int>() {1,2,79,80,81,160}; 
+
         public static void newMap()
         {
             int count = 0;
@@ -47,15 +50,15 @@ namespace Zero_Game
             }
             Player.Position = random.Next(1919);
             map[Player.Position] = Player.Char;
-            populateEnemeis(10);
+            populateEnemies(numberOfEnemies);
             Screen.print();
         }
-        private static void populateEnemeis(int number)
+        private static void populateEnemies(int number)
         {
             int i = 0;
             while(i < number)
             {
-                map[random.Next(1919)] = tileEnemy.Char;
+                tileEnemy.Save(random.Next(1919));
                 i++;
             }
         }
@@ -120,18 +123,25 @@ namespace Zero_Game
         }
         private static void lightUp()
         {
-            tilePath.Place(Player.Position - 1);
-            tilePath.Place(Player.Position - 2);
-            tilePath.Place(Player.Position - 79);
-            tilePath.Place(Player.Position - 80);
-            tilePath.Place(Player.Position - 81);
-            tilePath.Place(Player.Position - 160);
-            tilePath.Place(Player.Position + 1);
-            tilePath.Place(Player.Position + 2);
-            tilePath.Place(Player.Position + 79);
-            tilePath.Place(Player.Position + 80);
-            tilePath.Place(Player.Position + 81);
-            tilePath.Place(Player.Position + 160);
+            foreach(int i in numberOfLightPos)
+            {
+                tilePath.Place(Player.Position + i);
+                tilePath.Place(Player.Position - i);
+            }
+            foreach(int i in numberOfLightPos)
+            {
+                foreach (int j in tileEnemy.Enemies)
+                {
+                    if ((Player.Position - i) == j)
+                    {
+                        tileEnemy.Place(j);
+                    }
+                    else if ((Player.Position + i) == j)
+                    {
+                        tileEnemy.Place(j);
+                    }
+                }
+            }
         }
     }
 }
